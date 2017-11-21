@@ -1,6 +1,6 @@
 <?php
-require_once '../config/core.php';
-  session_start();
+require_once 'config/core.php';
+
   if (!isset($_SESSION['app_id'])) {
     $mensaje = "<div class='logMsg-dang'><p>Debes de Iniciar Sesión</p></div>";
     header('Location: '.URL.'login.php?err='.$mensaje);
