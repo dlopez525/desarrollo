@@ -1,8 +1,6 @@
 <?php
 require_once '../config/core.php';
   session_start();
-  echo $_SESSION['app_id'];
-  echo $_SESSION['app_tipoU'];
   if (!isset($_SESSION['app_id'])) {
     $mensaje = "<div class='logMsg-dang'><p>Debes de Iniciar Sesión</p></div>";
     header('Location: '.URL.'login.php?err='.$mensaje);
@@ -12,7 +10,7 @@ require_once '../config/core.php';
   }
 
  ?>
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -54,7 +52,7 @@ require_once '../config/core.php';
 
     <div class="main">
         <div class="main__cat">
-            <!-- <img src="img/menu.jpeg" alt="">
+            <!-- <img src="img/menu.jpeg" alt=""> -->
             <a href="#">
                 <div class="main__cat__caption">
                     <div class="main__cat__caption__name">
@@ -67,7 +65,7 @@ require_once '../config/core.php';
             </a>
         </div>
         <div class="main__cat">
-            <img src="img/drink.jpg" alt="">
+            <!-- <img src="img/drink.jpg" alt=""> -->
             <a href="#">
                 <div class="main__cat__caption">
                     <div class="main__cat__caption__name">
@@ -80,7 +78,7 @@ require_once '../config/core.php';
             </a>
         </div>
         <div class="main__cat">
-            <img src="img/sandwich.jpg" alt="">
+            <!-- <img src="img/sandwich.jpg" alt=""> -->
             <a href="#">
                 <div class="main__cat__caption">
                     <div class="main__cat__caption__name">
@@ -108,4 +106,4 @@ require_once '../config/core.php';
     </div>
     <script src="../views/js/script.js"></script>
 </body>
-</html> -->
+</html>
