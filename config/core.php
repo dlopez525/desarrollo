@@ -4,7 +4,7 @@
 #Constantes de la APP
   define('TITLE','Delivery');
   define('COPY','Copyright &copy; ' . date('Y',time()));
-  define('URL','http://dyl.dev/desarrollo/');
+  define('URL','http://localhost/desarrollo/');
 
 #Constantes de la conexion Base de Datos
   define('servidor', 'localhost');
@@ -20,7 +20,7 @@
   define('PHPMAILER_PROTOCOL', 'tls');
 
 #Constantes Autoload
-  require 'vendor/autoload.php';
+  // require 'vendor/autoload.php';
   include 'conexion.php';
   include 'funciones.php';
 

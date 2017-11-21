@@ -1,17 +1,4 @@
-<?php
-  // if (isset($_SESSION['app_id'])) {
-  //
-  // }
- ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Bienvenido</title>
-</head>
+<?php include 'overall/head.php'; ?>
 <body class="body-log">
     <div class="container welcome">
         <div class="welcome__logo">
