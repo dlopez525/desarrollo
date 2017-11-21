@@ -8,7 +8,7 @@
   $nombre = $data[0];
   $apellido = $data[1];
   $foto = $data[2];
-
+  
   $conexion->liberar($sql);
   $conexion->close();
  ?>

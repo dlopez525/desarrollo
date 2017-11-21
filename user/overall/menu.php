@@ -1,7 +1,7 @@
 <nav class="nav" id="navMenu">
     <div class="nav__profile">
         <div class="nav__profile__img">
-            <img src="../views/img/public/profile-default.png" alt="">
+            <img src="../views/<?php echo $foto; ?>" alt="">
         </div>
         <div class="nav__profile__name">
             <p><?php echo $nombre ." ". $apellido; ?></p>
