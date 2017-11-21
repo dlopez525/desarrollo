@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+<?php
+require_once '../config/core.php';
+  session_start();
+  echo $_SESSION['app_id'];
+  echo $_SESSION['app_tipoU'];
+  if (!isset($_SESSION['app_id'])) {
+    $mensaje = "<div class='logMsg-dang'><p>Debes de Iniciar Sesión</p></div>";
+    header('Location: '.URL.'login.php?err='.$mensaje);
+  } elseif ($_SESSION['app_tipoU'] != 2) {
+    $mensaje = "<div class='logMsg-dang'><p>No tienes los permisos para entrar a esta sección.</p></div>";
+    header('Location: '.URL.'login.php?err='.$mensaje);
+  }
+
+ ?>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -36,11 +50,11 @@
             <li class="nav__menu__item"><a href="#" class="nav__menu__link"><i class="icon-star"></i>Favorite</a></li>
             <li class="nav__menu__item"><a href="#" class="nav__menu__link"><i class="icon-settings-streamline-1"></i>Settings</a></li>
         </ul>
-    </nav> 
-    
+    </nav>
+
     <div class="main">
         <div class="main__cat">
-            <!-- <img src="img/menu.jpeg" alt=""> -->
+            <!-- <img src="img/menu.jpeg" alt="">
             <a href="#">
                 <div class="main__cat__caption">
                     <div class="main__cat__caption__name">
@@ -66,7 +80,7 @@
             </a>
         </div>
         <div class="main__cat">
-            <!-- <img src="img/sandwich.jpg" alt=""> -->
+            <img src="img/sandwich.jpg" alt="">
             <a href="#">
                 <div class="main__cat__caption">
                     <div class="main__cat__caption__name">
@@ -94,4 +108,4 @@
     </div>
     <script src="../views/js/script.js"></script>
 </body>
-</html>
+</html> -->
