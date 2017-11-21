@@ -8,6 +8,7 @@ if(!empty($_POST['email_txt']) and !empty($_POST['pass_txt'])) {
   $sql = $conexion->query("SELECT id_usuario,id_tipoUsuario FROM usuarios WHERE  email='$email' AND password='$pass' LIMIT 1;");
   if($conexion->rows($sql) > 0) {
     if($_POST['sesion']) { ini_set('session.cookie_lifetime', time() + (60*60*24)); }
+    @session_start();
     $data = $conexion->recorrer($sql);
     $_SESSION['app_id'] = $data[0];
     $_SESSION['app_tipoU'] = $data[1];
