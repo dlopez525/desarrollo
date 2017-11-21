@@ -1,5 +1,5 @@
 <?php
-	include '../../config/core.php';
+	include '../config/core.php';
 
  	$conexion = new Conexion();
 
@@ -17,12 +17,11 @@
  		// $ff = "../../img/public/";
 
  		$conexion->query("INSERT INTO productos (producto,categoria,stock,precio) VALUES ('$producto','$categoria','$stock','$precio');");
- 			echo "err";
 
  		// move_uploaded_file($nombreImg, "$ff/$nombreNImg");
 
 
- 	}
+ 		header("location: ../productos.php");
 
- 	echo "rr";
+ 	}
  ?>

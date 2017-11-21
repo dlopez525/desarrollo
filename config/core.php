@@ -1,8 +1,8 @@
 <?php
 #Inicia las sesiones
-  session_start();
+  // session_start();
 #Constantes de la APP
-  define('TITLE','Delivery');
+  define('TITLE','iFood');
   define('COPY','Copyright &copy; ' . date('Y',time()));
   define('URL','http://localhost/desarrollo/');
 
@@ -20,7 +20,7 @@
   define('PHPMAILER_PROTOCOL', 'tls');
 
 #Constantes Autoload
-  require 'vendor/autoload.php';
+  // require 'vendor/autoload.php';
   include 'conexion.php';
   include 'funciones.php';
 

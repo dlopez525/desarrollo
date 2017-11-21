@@ -2,12 +2,12 @@
 <body class="body-log">
     <div class="container welcome">
         <div class="welcome__logo">
-            <p>Logo Aquí</p>
+            <p>iFood</p>
         </div>
     </div>
     <div class="container">
         <div class="welcome__copy">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis reprehenderit eveniet, aliquid similique dignissimos error, magnam accusantium tempora officia soluta fugit ducimus hic laborum. Voluptas corporis vel consectetur aliquam optio?</p>
+            <p>Es una aplicación donde usted puede buscar variedad de menús, bebidas, golosinas, piqueos y snacks de las cafeterías del Instituto Superior TECSUP. <br> Esta de pagina esta dirigida a los estudiantes y personal  del Instituto TECSUP.</p>
         </div>
     </div>
     <div class="container">

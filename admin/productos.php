@@ -1,4 +1,3 @@
-<?php include 'mostrarProductos.php'; ?>
 <?php include 'includes/head.php'; ?>
 
   <body class="nav-md footer_fixed">
@@ -15,7 +14,7 @@
               <div class="col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Hover rows <small>Try hovering over the rows</small></h2>
+                    <h2>Productos</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -31,30 +30,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td><?php echo $producto; ?></td>
-                          <td><?php echo $categoria; ?></td>
-                          <td><?php echo $stock; ?></td>
-                          <td>s./ 1.0</td>
-                          <td><a href="edita.php?id=<?php  echo $id;?>">editar</a></td>
-                        </tr>
-                        <tr>
-                         <th scope="row">2</th>
-                          <td><?php echo $producto; ?></td>
-                          <td><?php echo $categoria; ?></td>
-                          <td><?php echo $stock; ?></td>
-                          <td>s./ 1.0</td>
-                          <td><a href="edita.php?id=<?php  echo $id;?>">editar</a></td>
-                        </tr>
-                        <tr>
-                        <th scope="row">3</th>
-                          <td><?php echo $producto; ?></td>
-                          <td><?php echo $categoria; ?></td>
-                          <td><?php echo $stock; ?></td>
-                          <td>s./ 1.0</td>
-                          <td><a href="edita.php?id=<?php  echo $id;?>">editar</a></td>
-                        </tr>
+                        <?php include 'docs/mostrarProductos.php'; ?>
                       </tbody>
                     </table>
 

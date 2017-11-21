@@ -1,5 +1,5 @@
 <?php
-	require '../config/core.php';
+	require 'config/core.php';
 
 	$conexion = new Conexion();
 

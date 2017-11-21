@@ -3,12 +3,22 @@
 
   $conexion = new Conexion();
   
-  $sql = $conexion->query("SELECT id_producto,producto,categoria,stock,precio FROM productos");
+  $sql = "SELECT id_producto,producto,categoria,stock,precio FROM productos";
+  $resultado = $conexion->query($sql);
+	$fila = mysqli_fetch_assoc($resultado);
+	$total = $conexion->rows($resultado);
 
-  $data = $conexion->recorrer($sql);
-  $id = $data[0];
-  $producto = $data[1];
-  $categoria = $data[2];
-  $stock = $data[3];
-  $precio = $data[4];
+if ($total>0) { ?>
+	<?php do { ?>
+		<tr>
+            <td><?php echo $fila['id_producto']; ?></td>
+            <td><?php echo $fila['producto']; ?></td>
+            <td><?php echo $fila['categoria']; ?></td>
+            <td><?php echo $fila['stock']; ?></td>
+            <td><?php echo $fila['precio']; ?></td>
+            <td><a href="editarProducto.php?id=<?php  echo $fila['id_producto'];?>">editar</a></td>
+            <td><a href="docs/eliminar.php?id=<?php  echo $fila['id_producto'];?>">eliminar</a></td>
+        </tr>
+	<?php } while ($fila=mysqli_fetch_assoc($resultado)); ?>
+<?php } 
  ?>
