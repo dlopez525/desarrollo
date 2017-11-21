@@ -20,7 +20,7 @@
   define('PHPMAILER_PROTOCOL', 'tls');
 
 #Constantes Autoload
-  // require 'vendor/autoload.php';
+  require 'vendor/autoload.php';
   include 'conexion.php';
   include 'funciones.php';
 
