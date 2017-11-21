@@ -4,7 +4,7 @@
             <img src="../views/img/public/profile-default.png" alt="">
         </div>
         <div class="nav__profile__name">
-            <p>Daniel López</p>
+            <p><?php echo $nombre ." ". $apellido; ?></p>
         </div>
         <div class="nav__profile__edit">
             <a href="#">Edit profile</a>

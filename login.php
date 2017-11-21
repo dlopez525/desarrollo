@@ -1,5 +1,5 @@
 <?php
-  include 'overall/sessionControl.php';
+  // include 'overall/sessionControl.php';
   include 'overall/head.php'; ?>
 <body class="body-log">
   <div class="container">
