@@ -5,10 +5,9 @@
 
 	$id = $_GET['id'];
 
-	$sql = $conexion->query("SELECT menu,precio FROM menu WHERE id_menu='$id'");
+	$sql = $conexion->query("SELECT id_menu,menu,precio FROM menu WHERE id_menu='$id'");
 	$data = $conexion->recorrer($sql);
-	$producto = $data[0];
-	$categoria= $data[1];
-	$stock = $data[2];
-	$precio= $data[3];
+	$id = $data[0];
+	$menu= $data[1];
+	$precio = $data[2];
 ?>

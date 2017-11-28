@@ -15,7 +15,7 @@
               <div class="col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Editar Producto</h2>
+                    <h2>Editar Menu</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -36,12 +36,13 @@
                           <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="text" name="precio" value="<?php echo $precio; ?>">
                         </div>
                       </div>
-                     
+
+                      <input type="hidden" name="id_menu" value="<?php echo $id; ?>">
+
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <button class="btn btn-primary" type="button">Cancel</button>
-              <button class="btn btn-primary" type="reset">Reset</button>
                           <button type="submit" class="btn btn-success" name="actualizarMenu_btn">Submit</button>
                         </div>
                       </div>
