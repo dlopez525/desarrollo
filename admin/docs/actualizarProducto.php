@@ -13,4 +13,4 @@
 		$conexion->query("UPDATE productos SET producto='$producto',categoria='$categoria',precio='$precio',stock='$stock' WHERE id_producto = '$id';");
 		}
 
-header("location: ../productos.php");
+header("location: ../productos.php?msg=1");

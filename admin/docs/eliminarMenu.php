@@ -5,5 +5,5 @@ $id = $_GET['id'];
 
 $conexion ->query("DELETE FROM menu WHERE id_menu = '$id'");
 
-header("location: ../menus.php");
+header("location: ../menus.php?msg=2");
 ?>

@@ -5,6 +5,5 @@ $id = $_GET['id'];
 
 $conexion ->query("DELETE FROM productos WHERE id_producto = '$id'");
 
-header("location: ../productos.php");
+header("location: ../productos.php?msg=2");
 ?>
-

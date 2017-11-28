@@ -9,6 +9,21 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
+            <?php
+              if (isset($_GET['msg'])) {
+                if ($_GET['msg'] == 1) {
+                  echo "<div class='alert alert-success alert-dismissible' role='alert'>
+                    <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                    El menu se actualizó corecctamente.
+                    </div>";
+                } elseif ($_GET['msg'] == 2) {
+                  echo "<div class='alert alert-warning alert-dismissible' role='alert'>
+                    <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+                    El menu se eliminó corecctamente.
+                    </div>";
+                }
+              }
+             ?>
             <div class="clearfix"></div>
 
               <div class="col-xs-12">

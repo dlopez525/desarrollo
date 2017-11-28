@@ -10,4 +10,4 @@
 		$conexion->query("UPDATE menu SET menu='$menu',precio='$precio' WHERE id_menu = '$id';");
 		}
 
-header("location: ../menus.php");
+header("location: ../menus.php?msg=1");
