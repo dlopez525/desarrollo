@@ -1,6 +1,6 @@
 <?php
-	require '../config/core.php';
-	$conexion = new Conexion();
+	require '../aconfig/core.php';
+	$conexion = new AConexion();
 
 
 	$producto= $_POST['producto'];
@@ -12,5 +12,5 @@
 	if (isset($_POST['actualizarProducto_btn'])) {
 		$conexion->query("UPDATE productos SET producto='$producto',categoria='$categoria',precio='$precio',stock='$stock' WHERE id_producto = '$id';");
 		}
-
+$conexion->close();
 header("location: ../productos.php?msg=1");

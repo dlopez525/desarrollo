@@ -1,7 +1,7 @@
 <?php
-	include '../config/core.php';
+	include '../aconfig/core.php';
 
- 	$conexion = new Conexion();
+ 	$conexion = new AConexion();
 
  	$producto = $_POST['producto_txt'];
  	$categoria = $_POST['categoria_slc'];
@@ -20,7 +20,7 @@
 
  		// move_uploaded_file($nombreImg, "$ff/$nombreNImg");
 
-
+		$conexion->close();
  		header("location: ../productos.php");
 
  	}

@@ -1,7 +1,7 @@
 <?php
-	require 'config/core.php';
+	require 'aconfig/core.php';
 
-	$conexion = new Conexion();
+	$conexion = new AConexion();
 
 	$id = $_GET['id'];
 
@@ -11,4 +11,7 @@
 	$categoria= $data[1];
 	$stock = $data[2];
 	$precio= $data[3];
+
+	$conexion->liberar($sql);
+	$conexion->close();
 ?>

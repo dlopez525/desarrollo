@@ -2,15 +2,15 @@
 #Inicia las sesiones
   session_start();
 #Constantes de la APP
-  define('UTITLE','iFood');
-  define('UCOPY','Copyright &copy; ' . date('Y',time()));
-  define('UURL','http://localhost/desarrollo/');
+  define('ATITLE','iFood');
+  define('ACOPY','Copyright &copy; ' . date('Y',time()));
+  define('AURL','http://localhost/desarrollo/');
 
 #Constantes de la conexion Base de Datos
-  define('servidor', 'localhost');
-  define('usuario', 'root');
-  define('password', '');
-  define('BD', 'delivery');
+  define('ASERVER', 'localhost');
+  define('AUSER', 'root');
+  define('APASS', '');
+  define('ABD', 'delivery');
 //
 // #Constantes PHPMailer
 //   define('PHPMAILER_SERVER', 'mailtrap.io');
@@ -20,8 +20,9 @@
 //   define('PHPMAILER_PROTOCOL', 'tls');
 
 #Constantes Autoload
-  // include '../vendor/autoload.php';
+  // require '../../vendor/autoload.php';
   include 'conexion.php';
-  include 'funciones.php';
+  // include 'funciones.php';
   include 'models/user.php';
+
  ?>

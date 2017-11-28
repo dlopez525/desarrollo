@@ -1,8 +1,7 @@
 <?php
-  include '../config/core.php';
 
-  $conexion = new Conexion();
-  
+  $conexion = new AConexion();
+
   $sql = "SELECT id_menu,menu,precio FROM menu";
   $resultado = $conexion->query($sql);
 	$fila = mysqli_fetch_assoc($resultado);
@@ -18,5 +17,8 @@ if ($total>0) { ?>
             <td><a href="docs/eliminarMenu.php?id=<?php  echo $fila['id_menu'];?>">eliminar</a></td>
         </tr>
 	<?php } while ($fila=mysqli_fetch_assoc($resultado)); ?>
-<?php } 
+<?php }
+
+$conexion->liberar($resultado);
+$conexion->close();
  ?>

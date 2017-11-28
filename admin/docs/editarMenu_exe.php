@@ -1,7 +1,7 @@
 <?php
-	require 'config/core.php';
+	require 'aconfig/core.php';
 
-	$conexion = new Conexion();
+	$conexion = new AConexion();
 
 	$id = $_GET['id'];
 
@@ -10,4 +10,6 @@
 	$id = $data[0];
 	$menu= $data[1];
 	$precio = $data[2];
+	$conexion->liberar($sql);
+	$conexion->close();
 ?>

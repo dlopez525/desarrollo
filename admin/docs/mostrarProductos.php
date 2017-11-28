@@ -1,8 +1,6 @@
 <?php
-  include '../config/core.php';
+  $conexion = new AConexion();
 
-  $conexion = new Conexion();
-  
   $sql = "SELECT id_producto,producto,categoria,stock,precio FROM productos";
   $resultado = $conexion->query($sql);
 	$fila = mysqli_fetch_assoc($resultado);
@@ -20,5 +18,7 @@ if ($total>0) { ?>
             <td><a href="docs/eliminar.php?id=<?php  echo $fila['id_producto'];?>">eliminar</a></td>
         </tr>
 	<?php } while ($fila=mysqli_fetch_assoc($resultado)); ?>
-<?php } 
+<?php }
+$conexion->liberar($resultado);
+$conexion->close();
  ?>

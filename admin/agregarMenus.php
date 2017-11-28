@@ -38,7 +38,7 @@
                           <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="number" name="precio_txt">
                         </div>
                       </div>
-                     
+
                       <!-- <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Imagen: <span class="required">*</span>
                         </label>
@@ -64,28 +64,6 @@
         <!-- /page content -->
 
         <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
-      </div>
-    </div>
-
-    <!-- jQuery -->
-    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="assets/vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="assets/vendors/nprogress/nprogress.js"></script>
-    <!-- jQuery custom content scroller -->
-    <script src="assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
-
-    <!-- Custom Theme Scripts -->
-    <script src="assets/build/js/custom.min.js"></script>
+          <?php include 'includes/footer.php' ?>
   </body>
 </html>

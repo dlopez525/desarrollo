@@ -1,7 +1,7 @@
 <?php
-	include '../config/core.php';
+	include '../aconfig/core.php';
 
- 	$conexion = new Conexion();
+ 	$conexion = new AConexion();
 
  	$menu = $_POST['menu_txt'];
  	$precio = $_POST['precio_txt'];
@@ -17,9 +17,7 @@
  		$conexion->query("INSERT INTO menu (menu,precio) VALUES ('$menu','$precio');");
 
  		// move_uploaded_file($nombreImg, "$ff/$nombreNImg");
-
-
+		$conexion->close();
  		header("location: ../menus.php");
-
  	}
  ?>

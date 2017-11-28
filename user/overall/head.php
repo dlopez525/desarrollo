@@ -1,13 +1,12 @@
 <?php
 require_once 'config/core.php';
 
-
   if (!isset($_SESSION['app_id'])) {
     $mensaje = "<div class='logMsg-dang'><p>Debes de Iniciar Sesión</p></div>";
-    header('Location: '.URL.'login.php?err='.$mensaje);
+    header('Location: ../login.php?err='.$mensaje);
   } elseif ($_SESSION['app_tipoU'] != 2) {
     $mensaje = "<div class='logMsg-dang'><p>No tienes los permisos para entrar a esta sección.</p></div>";
-    header('Location: '.URL.'login.php?err='.$mensaje);
+    header('Location: ../login.php?err='.$mensaje);
   }
 
  ?>
