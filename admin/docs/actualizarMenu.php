@@ -2,8 +2,7 @@
 	require '../config/core.php';
 	$conexion = new Conexion();
 
-
-	$producto= $_POST['menu'];
+	$menu = $_POST['menu'];
 	$precio = $_POST['precio'];
 	$id = $_POST['id'];
 

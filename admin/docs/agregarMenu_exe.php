@@ -3,8 +3,8 @@
 
  	$conexion = new Conexion();
 
- 	$producto = $_POST['menu_txt'];
- 	$stock = $_POST['precio_txt'];
+ 	$menu = $_POST['menu_txt'];
+ 	$precio = $_POST['precio_txt'];
 
 
  	if (isset($_POST['agregarMenu_btn'])){
