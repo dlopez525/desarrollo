@@ -22,7 +22,7 @@
   			break;
   	}
   }
-  function imagen_producto($tipo,$imagen,$producto) {
+  function subir_imagen($tipo,$imagen,$producto) {
     if(strstr($tipo,"image")) {
       if(strstr($tipo,"jpeg"))
         $extension = ".jpg";

@@ -11,14 +11,15 @@
 
  	if (isset($_POST['agregar_btn'])){
 
- 		// $nombreImg = $_FILES['imagen_fls']['tmp_name'];
- 		// $nombreNImg = $_FILES['imagen_fls']['name'];
- 		// $ruta="img/public/".$nombreNImg;
- 		// $ff = "../../img/public/";
+		//Se ejecuta la funcion para subir la imagen
+		$tipo = $_FILES["imagen_fls"]["type"];
+		$archivo = $_FILES["imagen_fls"]["tmp_name"];
+		$se_subio_imagen = subir_imagen($tipo,$archivo,$producto);
 
- 		$conexion->query("INSERT INTO productos (producto,categoria,stock,precio) VALUES ('$producto','$categoria','$stock','$precio');");
+		//Si la foto en el formulario viene vacia, entonces le asigno el valor de la imagen genérica, sino entonces el nombre de la foto que se subio.
+		$imagen = empty($archivo)?$imagen_generica:$se_subio_imagen;
 
- 		// move_uploaded_file($nombreImg, "$ff/$nombreNImg");
+ 		$conexion->query("INSERT INTO productos (producto,categoria,stock,precio,imagen) VALUES ('$producto','$categoria','$stock','$precio','$imagen');");
 
 		$conexion->close();
  		header("location: ../productos.php");
