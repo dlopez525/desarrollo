@@ -1,5 +1,5 @@
 <?php
-require 'config/core.php';
+require_once 'config/core.php';
 
 if(!isset($_SESSION['app_id']) and isset($_GET['key'])) {
   $conexion = new Conexion();

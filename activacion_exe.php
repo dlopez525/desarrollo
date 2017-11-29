@@ -1,5 +1,5 @@
 <?php
-  require 'config/core.php';
+  require_once 'config/core.php';
 
   if(isset($_GET['key'], $_SESSION['app_id'])) {
     $db = new Conexion();

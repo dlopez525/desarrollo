@@ -1,17 +1,7 @@
 <?php
-
-// function conectarse()
-// {
-//   $conectar = new mysqli(servidor,usuario,password,BD);
-//   return $conectar;
-// }
-//
-// $conexion = conectarse();
-
 class Conexion extends mysqli {
-
   public function __construct() {
-    parent::__construct(servidor,usuario,password,BD);
+    parent::__construct(SERVER,USER,PASS,BD);
     $this->connect_errno ? die('Error en la conexión a la base de datos') : null;
     $this->set_charset("utf8");
   }
@@ -27,7 +17,6 @@ class Conexion extends mysqli {
   public function recorrer($query) {
     return mysqli_fetch_array($query);
   }
-
 }
 
 

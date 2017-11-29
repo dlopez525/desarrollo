@@ -20,7 +20,7 @@
         <div class="boxTextLog boxTextLog-login">
             <div class="boxTextLog__group">
                 <label for="email" class="boxTextLog__group__label">Email:</label>
-                <input type="text" class="boxTextLog__group__input" id="email" name="email_txt">
+                <input type="text" class="boxTextLog__group__input" id="email" name="email_txt" required>
             </div>
         </div>
 
@@ -29,6 +29,11 @@
         </div>
       </form>
 
+    </div>
+    <div class="container fin">
+        <div class="linkSingup">
+            <p>¿Tienes una cuenta? <a href="login.php" class="linkSingup__link">Inicia Sesión</a></p>
+        </div>
     </div>
     <!-- <div class="container fin">
         <div class="buttonLog">

@@ -1,5 +1,5 @@
 <?php
-require 'config/core.php';
+require_once 'config/core.php';
 
 if(!empty($_POST['email_txt']) and !empty($_POST['pass_txt'])) {
   $conexion = new Conexion();
