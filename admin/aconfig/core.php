@@ -11,18 +11,10 @@
   define('AUSER', 'root');
   define('APASS', '');
   define('ABD', 'delivery');
-//
-// #Constantes PHPMailer
-//   define('PHPMAILER_SERVER', 'mailtrap.io');
-//   define('PHPMAILER_PORT', 25);
-//   define('PHPMAILER_USER', '5603c12ea2878f');
-//   define('PHPMAILER_PASSWORD', 'abbfeae23e9f56');
-//   define('PHPMAILER_PROTOCOL', 'tls');
 
 #Constantes Autoload
-  // require '../../vendor/autoload.php';
   include 'conexion.php';
-  // include 'funciones.php';
+  include 'functions.php';
   include 'models/user.php';
 
  ?>
