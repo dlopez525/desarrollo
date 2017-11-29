@@ -12,6 +12,9 @@ if(!isset($_SESSION['app_id']) and isset($_GET['key'])) {
     $pass = $data[1];
     $new_pass = Encrypt($pass);
     $password = $data[1];
+
+    $_SESSION['passReset'] = true;
+
     $conexion->query("UPDATE usuarios SET password='$new_pass' WHERE id_usuario='$id_user';");
     include('reset.php');
   } else {
