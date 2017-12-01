@@ -10,13 +10,13 @@ if ($total>0) { ?>
   <?php do { ?>
      <div class="productos__item">
                 <div class="productos__item__img">
-                    <img src="<?php echo $fila['producto'];?>" alt="">
+                    <img src="../views/img/productos/<?php echo $fila['producto'];?>.jpg" alt="">
                 </div>
                 <div class="productos__item__details">
                     <p class="productos__item__details__titulo"><?php echo $fila['producto'];?></p>
                     <p class="productos__item__details__cate"><?php echo $fila['categoria'];?></p>
                     <p class="productos__item__details__price"><?php echo $fila['precio'];?></p>
-                    <button class="productos__item__details__add"><i class="icon-ios-cart-outline"></i></button>
+                    <a href="models/cartG.php?id=<?php echo $fila['id_producto'];?>" class="productos__item__details__add"><i class="icon-ios-cart-outline"></i></a>
                 </div>
             </div>
   <?php } while ($fila=mysqli_fetch_assoc($resultado)); ?>

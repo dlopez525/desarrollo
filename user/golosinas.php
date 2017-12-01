@@ -7,7 +7,7 @@
             <?php include 'docs/mostrargolosinas.php'; ?>
         </div>
     </div>
-    
+
     <div id="total">
         <div class="total">
             <div class="total__text">
@@ -18,7 +18,7 @@
             </div>
         </div>
     </div>
-    
-    <script src="js/script.js"></script>
+
+    <script src="../views/js/script.js"></script>
 </body>
 </html>

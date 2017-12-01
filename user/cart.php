@@ -5,8 +5,6 @@
 	<meta charset="utf-8"/>
 	<title>Carrito de Compras</title>
 	<link rel="stylesheet" type="text/css" href="./css/estilos.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript"  src="./js/scripts.js"></script>
 </head>
 <body>
 	<header>
@@ -51,5 +49,7 @@
 
 ?>
 	</section>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="../views/js/cart.js"></script>
 </body>
 </html>
