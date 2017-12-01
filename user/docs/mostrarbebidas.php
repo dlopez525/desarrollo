@@ -16,7 +16,7 @@ if ($total>0) { ?>
                     <p class="productos__item__details__titulo"><?php echo $fila['producto'];?></p>
                     <p class="productos__item__details__cate"><?php echo $fila['categoria'];?></p>
                     <p class="productos__item__details__price"><?php echo $fila['precio'];?></p>
-                    <button class="productos__item__details__add"><i class="icon-ios-cart-outline"></i></button>
+                    <a href="models/cartB.php?id=<?php echo $fila['id_producto'];?>" class="productos__item__details__add"><i class="icon-ios-cart-outline"></i></a>
                 </div>
             </div>
 	<?php } while ($fila=mysqli_fetch_assoc($resultado)); ?>
