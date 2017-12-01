@@ -456,7 +456,7 @@ input:focus {
   outline: 0px;
 }
 
-.container, .buttonsIndex, header .top, .main__cat__caption, .producto, .car, .nav-fecha {
+.container, .buttonsIndex, header .top, .main__cat__caption, .productos, .productos__item, .total, .total__cart, .total__cart__text {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -480,7 +480,7 @@ input:focus {
 .logMsg-dang,
 .logMsg-succ,
 .logMsgNT-succ,
-.logMsgNT-war, .titleLog, header .top__menu, header .top__titulo, header .top__carrito, .main__cat__caption__name, .main__cat__caption__cant, .producto, .producto__img, .producto__desc, .car__text, .car__total, .nav-fecha__date {
+.logMsgNT-war, .titleLog, header .top__menu, header .top__titulo, header .top__carrito, .main__cat__caption__name, .main__cat__caption__cant, .productos__item, .productos__item__img, .productos__item__details, .total__text, .total__price, .total__cart__text, .total__cart__text p, .total__cart__order {
   margin: 0;
   padding-left: 15px;
   padding-right: 15px;
@@ -1064,6 +1064,7 @@ header .top__titulo {
 header .top__carrito {
   width: 15%;
   cursor: pointer;
+  position: relative;
 }
 
 @media screen and (min-width: 1024px) {
@@ -1075,6 +1076,37 @@ header .top__carrito {
 header .top__carrito i {
   position: relative;
   top: 3px;
+}
+
+header .top__carrito__badges {
+  position: absolute;
+  background: #79D440;
+  font-size: .8em;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  line-height: 17px;
+  font-weight: 600;
+  top: 10px;
+  right: 17px;
+}
+
+@media screen and (min-width: 640px) {
+  header .top__carrito__badges {
+    right: 28px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header .top__carrito__badges {
+    right: 38px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header .top__carrito__badges {
+    right: 50px;
+  }
 }
 
 .nav {
@@ -1217,7 +1249,7 @@ header .top__carrito i {
 
 .main__cat:nth-child(2) {
   grid-row: auto / span 2;
-  background-image: url("../../views/img/drink.jpg");
+  background-image: url("../img/drink.jpg");
   background-size: cover;
   background-position: center 0;
   height: 50vh;
@@ -1232,7 +1264,7 @@ header .top__carrito i {
 .main__cat:nth-child(3) {
   height: 25vh;
   max-height: 25vh;
-  background-image: url("../../views/img/sandwich.jpg");
+  background-image: url("../img/sandwich.jpg");
   background-size: cover;
   background-position: center 0;
 }
@@ -1240,7 +1272,7 @@ header .top__carrito i {
 .main__cat:nth-child(4) {
   height: calc(25vh - 3.2em);
   min-height: 25vh;
-  background-image: url("../../views/img/candys.jpg");
+  background-image: url("../img/candys.jpg");
   background-size: cover;
   background-position: center 0;
   background-position: center 0;
@@ -1296,158 +1328,210 @@ header .top__carrito i {
   display: block;
 }
 
-.producto {
-  width: 100%;
-  background: #fff;
+.grayBG {
+  background: #EAEAEF;
+}
+
+#productos {
   margin-top: 1em;
 }
 
-@media screen and (min-width: 1024px) {
-  .producto {
+.productos__item {
+  width: 100%;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+@media screen and (min-width: 640px) {
+  .productos__item {
     width: 50%;
   }
 }
 
-.producto__img {
-  width: 40%;
-}
-
 @media screen and (min-width: 1024px) {
-  .producto__img {
-    width: 25%;
+  .productos__item {
+    width: 33.33%;
   }
 }
 
-.producto__desc {
-  width: 60%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-@media screen and (min-width: 1024px) {
-  .producto__desc {
-    width: 75%;
-  }
-}
-
-.producto__desc__titulo {
-  color: #0E0D0E;
-  font-size: .9em;
-}
-
-.producto__desc__categoria {
-  font-size: .8em;
-}
-
-.producto__desc__precio {
-  color: #79D440;
-  font-size: .9em;
-}
-
-.car {
-  margin-top: auto;
-  max-width: 100%;
-  background: #79D440;
-}
-
-body {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.car__text {
-  width: 70%;
-  color: #fff;
-}
-
-.car__text p {
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  line-height: 2.8;
-}
-
-.car__total {
-  width: 30%;
-  color: #fff;
-}
-
-.car__total p {
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-  line-height: 2.8;
-}
-
-header {
-  background: #0E0D0E;
-}
-
-header .top {
-  max-width: 100%;
-  color: #fff;
-}
-
-header .top__menu {
-  width: 15%;
-  line-height: 2.8;
+.productos__item__img {
+  width: 45%;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 @media screen and (min-width: 640px) {
-  header .top__menu {
-    width: 20%;
+  .productos__item__img {
+    width: 50%;
   }
 }
 
-header .top__titulo {
-  width: 70%;
-  text-transform: capitalize;
-  text-align: center;
-  line-height: 2.8;
+@media screen and (min-width: 1024px) {
+  .productos__item__img {
+    width: 40%;
+  }
+}
+
+.productos__item__img img {
+  display: block;
+  height: 100%;
+}
+
+.productos__item__details {
+  width: 55%;
+  background: #ffffff;
 }
 
 @media screen and (min-width: 640px) {
-  header .top__titulo {
+  .productos__item__details {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .productos__item__details {
     width: 60%;
   }
 }
 
-header .top__carrito {
-  width: 15%;
-  line-height: 2.8;
+.productos__item__details__titulo {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.productos__item__details__cate {
+  font-weight: 300;
+  font-size: .8em;
+  margin: 0;
+  color: #808080;
+}
+
+.productos__item__details__price {
+  color: #79D440;
+  position: relative;
+  bottom: 0;
+  font-weight: 600;
+}
+
+.productos__item__details__add {
+  float: right;
+  width: auto;
+  margin-left: 1em;
+  color: #ffffff;
+  background: #79D440;
+  border-radius: 3px;
+  border: none;
+  line-height: 2;
+  padding: 0 20px;
+  font-size: 1.15em;
+  margin-bottom: 15px;
+}
+
+.productos__item__details__add i {
+  position: relative;
+  top: 3px;
+}
+
+.productos__item__details__add:hover {
+  background: #60b829;
+}
+
+.productos__item__details__btnCant {
+  float: right;
+  width: auto;
+  margin-left: 1em;
+}
+
+.productos__item__details__btnCant__btn {
+  color: #ffffff;
+  background: #79D440;
+  border-radius: 3px;
+  border: none;
+  line-height: 2;
+  padding: 0 20px;
+  font-size: 1.15em;
+}
+
+.productos__item__details__btnCant__btn:hover {
+  background: #60b829;
+}
+
+#total {
+  background: #79D440;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.total {
+  color: #ffffff;
+  line-height: 3.5em;
+  font-weight: 600;
+}
+
+.total__text {
+  width: 80%;
+}
+
+.total__text p {
+  margin: 0;
+}
+
+.total__price {
+  width: 20%;
+  text-align: center;
+}
+
+.total__price p {
+  margin: 0;
+}
+
+.total__cart {
+  color: #ffffff;
+  line-height: 3.5em;
+  font-weight: 600;
+}
+
+.total__cart__text {
+  width: 70%;
+}
+
+.total__cart__text p {
+  width: 20%;
 }
 
 @media screen and (min-width: 640px) {
-  header .top__carrito {
+  .total__cart__text p {
+    width: 10%;
+  }
+}
+
+.total__cart__order {
+  width: 30%;
+}
+
+@media screen and (min-width: 640px) {
+  .total__cart__order {
     width: 20%;
   }
 }
 
-.nav-fecha {
-  max-width: 100%;
-  background: #fff;
+@media screen and (min-width: 1024px) {
+  .total__cart__order {
+    width: 10%;
+  }
 }
 
-.nav-fecha__date {
-  width: 33%;
-  text-align: center;
-  line-height: 3;
+.total__cart__order button {
+  border: none;
+  background: #356417;
+  color: #EAEAEF;
+  line-height: 1.5em;
+  padding: 0 20px;
+  border-radius: 3px;
+  margin: 0 auto;
 }
 
-.nav-fecha__date p {
-  margin: 0;
-  padding: 0;
-}
-
-.nav-fecha__date.active {
-  -webkit-box-shadow: 0px -4px 0 #79D440 inset;
-  box-shadow: 0px -4px 0 #79D440 inset;
+.total__cart__order button:hover {
+  background: #55a325;
 }
