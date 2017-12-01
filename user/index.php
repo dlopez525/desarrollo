@@ -18,7 +18,7 @@
         </div>
         <div class="main__cat">
             <!-- <img src="img/drink.jpg" alt=""> -->
-            <a href="#">
+            <a href="bebidas.php">
                 <div class="main__cat__caption">
                     <div class="main__cat__caption__name">
                         <p>Bebidas</p>
@@ -31,7 +31,7 @@
         </div>
         <div class="main__cat">
             <!-- <img src="img/sandwich.jpg" alt=""> -->
-            <a href="#">
+            <a href="snacks.php">
                 <div class="main__cat__caption">
                     <div class="main__cat__caption__name">
                         <p>Snacks</p>
@@ -44,7 +44,7 @@
         </div>
         <div class="main__cat">
             <img src="img/candys.jpg" alt="">
-            <a href="#">
+            <a href="golosinas.php">
                 <div class="main__cat__caption">
                     <div class="main__cat__caption__name">
                         <p>Golosinas</p>
