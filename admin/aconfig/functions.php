@@ -48,8 +48,8 @@
 
             imagecopyresampled($img_reajustada, $img_original, 0, 0, 0, 0, $nuevo_ancho_img, $nuevo_alto_img, $ancho_img, $alto_img);
 
-            $nombre_img_ext = "../../views/img/menus/".$producto.$extension;
-            $nombre_img = "../../views/img/menus/".$producto;
+            $nombre_img_ext = "../../views/img/productos/".$producto.$extension;
+            $nombre_img = "../../views/img/productos/".$producto;
             imagejpeg($img_reajustada,$nombre_img_ext,100);
 
             borrar_imagenes($nombre_img,".jpg");
@@ -59,8 +59,8 @@
             //Reajusto la imagen nueva con respecto a la original
             imagecopyresampled($img_reajustada, $img_original, 0, 0, 0, 0, $nuevo_ancho_img, $nuevo_alto_img, $ancho_img, $alto_img);
             //Guardo la imagen reescalada en el servidor
-            $nombre_img_ext = "../../views/img/menus/".$producto.$extension;
-            $nombre_img = ".../../views/img/menus/".$producto;
+            $nombre_img_ext = "../../views/img/productos/".$producto.$extension;
+            $nombre_img = ".../../views/img/productos/".$producto;
             imagegif($img_reajustada,$nombre_img_ext,100);
             //Ejecuto la funcion para borrar posibles imagenes dobles para el perfil
             borrar_imagenes($nombre_img,".gif");
@@ -70,21 +70,21 @@
             //Reajusto la imagen nueva con respecto a la original
             imagecopyresampled($img_reajustada, $img_original, 0, 0, 0, 0, $nuevo_ancho_img, $nuevo_alto_img, $ancho_img, $alto_img);
             //Guardo la imagen reescalada en el servidor
-            $nombre_img_ext = "../../views/img/menus/".$producto.$extension;
-            $nombre_img = "../../views/img/menus/".$producto;
+            $nombre_img_ext = "../../views/img/productos/".$producto.$extension;
+            $nombre_img = "../../views/img/productos/".$producto;
             imagepng($img_reajustada,$nombre_img_ext);
             //Ejecuto la funcion para borrar posibles imagenes dobles para el perfil
             borrar_imagenes($nombre_img,".png");
             break;
         }
       } else {
-        $destino="../../views/img/menus/".$producto.$extension;
+        $destino="../../views/img/productos/".$producto.$extension;
 
         //Se sube la foto
         move_uploaded_file($imagen,$destino) or die("No se pudo subir la imagen al Servidor :(");
 
         //Ejecuto la funcion para borrar posibles imagenes dobles para el perfil
-        $nombre_img = "../../views/img/menus/".$producto;
+        $nombre_img = "../../views/img/productos/".$producto;
         borrar_imagenes($nombre_img,$extension);
       }
         //Asigno el nombre de la foto que se guardará en la BD como cadena de texto
