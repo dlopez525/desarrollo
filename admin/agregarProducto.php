@@ -37,9 +37,9 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <select id="heard" class="form-control" required name="categoria_slc">
                             <option value="">Selecciona una categoria...</option>
-                            <option value="press">Bebidas</option>
-                            <option value="net">Snack</option>
-                            <option value="mouth">Golosinas</option>
+                            <option value="bebidas">Bebidas</option>
+                            <option value="snack">Snack</option>
+                            <option value="golosinas">Golosinas</option>
                           </select>
                         </div>
                       </div>

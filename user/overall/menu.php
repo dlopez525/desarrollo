@@ -12,10 +12,10 @@
     </div>
 
     <ul class="nav__menu">
-        <li class="nav__menu__item"><a href="#" class="nav__menu__link"><i class="icon-home-house-streamline"></i>Home</a></li>
-        <li class="nav__menu__item"><a href="#" class="nav__menu__link"><i class="icon-ios-cart-outline"></i>My cart</a></li>
-        <li class="nav__menu__item"><a href="#" class="nav__menu__link"><i class="icon-ios-time-outline"></i>Last Orders</a></li>
-        <li class="nav__menu__item"><a href="#" class="nav__menu__link"><i class="icon-star"></i>Favorite</a></li>
+        <li class="nav__menu__item"><a href="index.php" class="nav__menu__link"><i class="icon-home-house-streamline"></i>Inicio</a></li>
+        <li class="nav__menu__item"><a href="cart.php" class="nav__menu__link"><i class="icon-ios-cart-outline"></i>Mi carrito</a></li>
+        <!-- <li class="nav__menu__item"><a href="#" class="nav__menu__link"><i class="icon-ios-time-outline"></i>Last Orders</a></li>
+        <li class="nav__menu__item"><a href="#" class="nav__menu__link"><i class="icon-star"></i>Favorite</a></li> -->
         <li class="nav__menu__item"><a href="logout.php" class="nav__menu__link"><i class="icon-settings-streamline-1"></i>Salir</a></li>
     </ul>
 </nav>
