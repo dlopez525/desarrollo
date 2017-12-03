@@ -20,7 +20,7 @@
           </ul>
 
         </li>
-        <li class="nav__menu__item"><a href="cart.php" class="nav__menu__link"><i class="icon-ios-cart-outline"></i>Mis Compras</a></li>
+        <li class="nav__menu__item"><a href="compras.php" class="nav__menu__link"><i class="icon-ios-cart-outline"></i>Mis Compras</a></li>
         <!-- <li class="nav__menu__item"><a href="#" class="nav__menu__link"><i class="icon-ios-time-outline"></i>Last Orders</a></li>
         <li class="nav__menu__item"><a href="#" class="nav__menu__link"><i class="icon-star"></i>Favorite</a></li> -->
         <li class="nav__menu__item"><a href="logout.php" class="nav__menu__link"><i class="icon-settings-streamline-1"></i>Salir</a></li>
