@@ -3,7 +3,7 @@
   if (!isset($_SESSION['app_id'])) {
     $mensaje = "<div class='logMsg-dang'><p>Debes de Iniciar Sesión</p></div>";
     header('Location: ../login.php?err='.$mensaje);
-  } elseif ($_SESSION['app_tipoU'] != 1) {
+  } elseif ($_SESSION['app_tipoU'] != 1 && $_SESSION['app_tipoU'] != 3) {
     $mensaje = "<div class='logMsg-dang'><p>No tienes los permisos para entrar a esta sección.</p></div>";
     header('Location: ../login.php?err='.$mensaje);
   }

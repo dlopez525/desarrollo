@@ -5,7 +5,7 @@
 
  	$nombre = $_POST['nombre_txt'];
  	$apellido = $_POST['apellido_txt'];
- 	$password = $_POST['password_txt'];
+ 	$password = Encrypt($_POST['password_txt']);
  	$email = $_POST['email_txt'];
 
 
