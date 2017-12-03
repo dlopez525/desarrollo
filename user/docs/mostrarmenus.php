@@ -1,7 +1,8 @@
 <?php
   $conexion = new Conexion();
+  $now = date("d")."-".date("m")."-".date("Y");
 
-  $sql = "SELECT id_producto,producto,categoria,precio,imagen FROM productos WHERE categoria = 'menus'" ;
+  $sql = "SELECT id_menu,menu,descripcion,precio,imagen FROM menu WHERE fecha = '$now'" ;
   $resultado = $conexion->query($sql);
   $fila = mysqli_fetch_assoc($resultado);
   $total = $conexion->rows($resultado);
@@ -10,13 +11,13 @@ if ($total>0) { ?>
   <?php do { ?>
      <div class="productos__item">
                 <div class="productos__item__img">
-                    <img src="<?php echo $fila['producto'];?>" alt="">
+                    <img src="../views/img/menus/<?php echo $fila['imagen'];?>" alt="">
                 </div>
                 <div class="productos__item__details">
-                    <p class="productos__item__details__titulo"><?php echo $fila['producto'];?></p>
-                    <p class="productos__item__details__cate"><?php echo $fila['categoria'];?></p>
+                    <p class="productos__item__details__titulo"><?php echo $fila['menu'];?></p>
+                    <p class="productos__item__details__cate"><?php echo $fila['descripcion'];?></p>
                     <p class="productos__item__details__price"><?php echo $fila['precio'];?></p>
-                    <button class="productos__item__details__add"><i class="icon-ios-cart-outline"></i></button>
+                    <a href="models/cartM.php?id=<?php echo $fila['id_menu'];?>" class="productos__item__details__add"><i class="icon-ios-cart-outline"></i></a>
                 </div>
             </div>
   <?php } while ($fila=mysqli_fetch_assoc($resultado)); ?>

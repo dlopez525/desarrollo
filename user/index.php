@@ -5,7 +5,7 @@
     <div class="main">
         <div class="main__cat">
             <!-- <img src="img/menu.jpeg" alt=""> -->
-            <a href="#">
+            <a href="menus.php">
                 <div class="main__cat__caption">
                     <div class="main__cat__caption__name">
                         <p>Menu</p>
