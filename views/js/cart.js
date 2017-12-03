@@ -11,7 +11,7 @@ var inicio=function () {
 					Precio:precio,
 					Cantidad:cantidad
 				},function(e){
-						$("#totalCarrito").text('Total: '+e);
+						$("#totalCarrito__item").text('S/. '+e);
 				});
 			}
 		}
@@ -23,12 +23,10 @@ var inicio=function () {
 		$.post('../views/js/eliminarCart.php',{
 			Id:id
 		},function(a){
-
 			if(a=='0'){
 				location.href="./cart.php";
 			}
 		});
-
 	});
 }
 $(document).on('ready',inicio);

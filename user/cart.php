@@ -40,16 +40,16 @@
 			echo "<div id='totalCarrito' class='totalCarrito'>
 	        <div class='totalCarrito__cart'>
 	            <p>Total</p>
-	            <p>".$total."</p>
-	        </div>";
-			echo "<div class='totalCarrito__conf'>
-	            <a href='#'>Confirmar Compra</a>
+	            <p id='totalCarrito__item'>S/.".$total."</p>
 	        </div>
-	    </div>";
+					<div class='totalCarrito__conf'>
+			            <a href='models/confCompra.php'>Confirmar Compra</a>
+			        </div>
+			    </div>";
 		}else{
 			if (isset($_GET['cod'])) {
 				$cod = $_GET['cod'];
-				$mensaje = "La compra se realizó correctamente.<br> Tu código de Compra es: {$cod}. <br> Necesitas Presentar este codigo para recoger tu pedido";
+				$mensaje = "<div class='confCompra'><div class='confCompra__item'><p>La compra se realizó correctamente.</p><p>Tu código de Compra es: <span>{$cod}</span>.</p><p>Necesitas Presentar este codigo para recoger tu pedido.</p></div></div>";
 				echo $mensaje;
 			} elseif (isset($_GET['err'])) {
 				echo "Algo salio mal, vuelve a intentarlo";

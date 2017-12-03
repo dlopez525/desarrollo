@@ -456,7 +456,7 @@ input:focus {
   outline: 0px;
 }
 
-.container, .buttonsIndex, header .top, .main__cat__caption, .productos, .productos__item, .total, .total__cart, .total__cart__text, .totalCarrito {
+.container, .buttonsIndex, header .top, .main__cat__caption, .productos, .productos__item, .total, .total__cart, .total__cart__text, .totalCarrito, .confCompra {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -480,7 +480,7 @@ input:focus {
 .logMsg-dang,
 .logMsg-succ,
 .logMsgNT-succ,
-.logMsgNT-war, .titleLog, header .top__menu, header .top__titulo, header .top__carrito, .main__cat__caption__name, .main__cat__caption__cant, .productos__item, .productos__item__img, .productos__item__details, .total__text, .total__price, .total__cart__text, .total__cart__text p, .total__cart__order, .totalCarrito__cart, .totalCarrito__conf {
+.logMsgNT-war, .titleLog, header .top__menu, header .top__titulo, header .top__carrito, .main__cat__caption__name, .main__cat__caption__cant, .productos__item, .productos__item__img, .productos__item__details, .total__text, .total__price, .total__cart__text, .total__cart__text p, .total__cart__order, .totalCarrito__cart, .totalCarrito__conf, .confCompra__item {
   margin: 0;
   padding-left: 15px;
   padding-right: 15px;
@@ -1631,6 +1631,35 @@ header .top__carrito__badges {
   text-decoration: none;
 }
 
+.totalCarrito__conf a.d {
+  pointer-events: none;
+}
+
 .totalCarrito__conf:hover {
   background: #3f791b;
+}
+
+.confCompra {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+.confCompra__item {
+  width: 50%;
+  background: #fff;
+}
+
+.confCompra__item p span {
+  font-weight: 600;
+  color: #79D440;
 }
