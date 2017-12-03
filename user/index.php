@@ -3,6 +3,7 @@
     <?php include 'overall/header.php'; ?>
     <?php include 'overall/menu.php'; ?>
     <div class="main">
+      <?php require 'models/rows.php'; ?>
         <div class="main__cat">
             <!-- <img src="img/menu.jpeg" alt=""> -->
             <a href="#">
@@ -11,7 +12,7 @@
                         <p>Menu</p>
                     </div>
                     <div class="main__cat__caption__cant">
-                        <p>18</p>
+                        <p><?php //use Menu as M; echo M\cat();?></p>
                     </div>
                 </div>
             </a>
@@ -24,7 +25,7 @@
                         <p>Bebidas</p>
                     </div>
                     <div class="main__cat__caption__cant">
-                        <p>10</p>
+                        <p><?php echo cat('bebidas');?></p>
                     </div>
                 </div>
             </a>
