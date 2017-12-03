@@ -24,7 +24,7 @@ if(!empty($_POST['email_txt']) and !empty($_POST['pass_txt'])) {
           header('Location: '.URL.'user/');
           break;
         case '3':
-          header('Location: '.URL.'user/');
+          header('Location: '.URL.'admin/');
           break;
 
         default:
