@@ -7,18 +7,7 @@
             <?php include 'docs/mostrarmenus.php'; ?>
         </div>
     </div>
-    
-    <div id="total">
-        <div class="total">
-            <div class="total__text">
-                <p>BUY</p>
-            </div>
-            <div class="total__price">
-                <p>$18.5</p>
-            </div>
-        </div>
-    </div>
-    
+
     <script src="../views/js/script.js"></script>
 </body>
 </html>

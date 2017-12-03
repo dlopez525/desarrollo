@@ -8,17 +8,6 @@
         </div>
     </div>
 
-    <div id="total">
-        <div class="total">
-            <div class="total__text">
-                <p>BUY</p>
-            </div>
-            <div class="total__price">
-                <p><?php echo $total; ?></p>
-            </div>
-        </div>
-    </div>
-
     <script src="../views/js/script.js"></script>
 </body>
 </html>

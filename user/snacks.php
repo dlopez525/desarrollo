@@ -6,18 +6,7 @@
         <div class="productos">
             <?php include 'docs/mostrarsnacks.php'; ?>
         </div>
-    </div>
-
-    <div id="total">
-        <div class="total">
-            <div class="total__text">
-                <p>BUY</p>
-            </div>
-            <div class="total__price">
-                <p><?php echo $total; ?></p>
-            </div>
-        </div>
-    </div>
+    </div
 
     <script src="../views/js/script.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
