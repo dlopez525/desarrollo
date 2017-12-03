@@ -14,11 +14,12 @@
                 <p>BUY</p>
             </div>
             <div class="total__price">
-                <p>$18.5</p>
+                <p id="total"></p>
             </div>
         </div>
     </div>
 
     <script src="../views/js/script.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 </body>
 </html>
