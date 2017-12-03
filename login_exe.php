@@ -23,6 +23,9 @@ if(!empty($_POST['email_txt']) and !empty($_POST['pass_txt'])) {
         case '2':
           header('Location: '.URL.'user/');
           break;
+        case '3':
+          header('Location: '.URL.'user/');
+          break;
 
         default:
         $mensaje = "<div class='logMsg-dang'><p>Debes de Iniciar Sesión</p></div>";

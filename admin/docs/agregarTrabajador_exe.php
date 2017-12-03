@@ -12,7 +12,7 @@
  	if (isset($_POST['agregar_btn'])){
 
 
- 		$conexion->query("INSERT INTO usuarios (password,email,nombre,apellido,id_tipoUsuario, id_tipoCuenta,cuenta) VALUES ('$password','$email','$nombre','$apellido',2,1,'Enabled');");
+ 		$conexion->query("INSERT INTO usuarios (password,email,nombre,apellido,id_tipoUsuario, id_tipoCuenta,cuenta) VALUES ('$password','$email','$nombre','$apellido',3,1,'Enabled');");
 
  		header("location: ../trabajadores.php");
 

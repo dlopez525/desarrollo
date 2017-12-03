@@ -2,7 +2,7 @@
   // require_once 'aconfig/core.php';
   $conexion = new AConexion();
 
-  $sql = "SELECT id_usuario,nombre,apellido,password,email FROM usuarios";
+  $sql = "SELECT id_usuario,nombre,apellido,password,email FROM usuarios WHERE id_tipoUsuario = '3';";
   $resultado = $conexion->query($sql);
 	$fila = mysqli_fetch_assoc($resultado);
 	$total = $conexion->rows($resultado);
