@@ -456,7 +456,7 @@ input:focus {
   outline: 0px;
 }
 
-.container, .buttonsIndex, header .top, .main__cat__caption, .productos, .productos__item, .total, .total__cart, .total__cart__text, .totalCarrito, .confCompra {
+.container, .buttonsIndex, header .top, .main__cat__caption, .productos, .productos__item, .total, .total__cart, .total__cart__text, .totalCarrito, .confCompra, .compras, .compras__item__header, .compras__item__body, .compras__item__footer {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -480,7 +480,7 @@ input:focus {
 .logMsg-dang,
 .logMsg-succ,
 .logMsgNT-succ,
-.logMsgNT-war, .titleLog, header .top__menu, header .top__titulo, header .top__carrito, .main__cat__caption__name, .main__cat__caption__cant, .productos__item, .productos__item__img, .productos__item__details, .total__text, .total__price, .total__cart__text, .total__cart__text p, .total__cart__order, .totalCarrito__cart, .totalCarrito__conf, .confCompra__item {
+.logMsgNT-war, .titleLog, header .top__menu, header .top__titulo, header .top__carrito, .main__cat__caption__name, .main__cat__caption__cant, .productos__item, .productos__item__img, .productos__item__details, .total__text, .total__price, .total__cart__text, .total__cart__text p, .total__cart__order, .totalCarrito__cart, .totalCarrito__conf, .confCompra__item, .compras__item, .compras__item__header p, .compras__item__footer__link {
   margin: 0;
   padding-left: 15px;
   padding-right: 15px;
@@ -1662,4 +1662,70 @@ header .top__carrito__badges {
 .confCompra__item p span {
   font-weight: 600;
   color: #79D440;
+}
+
+.compras {
+  margin-top: 1.5em;
+}
+
+.compras__item {
+  width: 50%;
+  background: #fff;
+  margin-bottom: 1em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.compras__item__header p {
+  width: 50%;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-weight: 600;
+}
+
+.compras__item__header p span {
+  font-weight: 400;
+}
+
+.compras__item__body {
+  margin-top: .5em;
+}
+
+.compras__item__body table {
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #808080;
+}
+
+.compras__item__body table tr td.total {
+  text-align: center;
+  font-weight: 600;
+  color: #0E0D0E;
+}
+
+.compras__item__body table tr th {
+  line-height: 1.6;
+  padding: 4px 8px;
+}
+
+.compras__item__body table tr td {
+  line-height: 1.5;
+  padding: 4px 8px;
+}
+
+.compras__item__footer {
+  margin-top: 1em;
+}
+
+.compras__item__footer__link {
+  width: 30%;
+  display: block;
+  background: #D23F31;
+  color: #fff;
+  line-height: 2em;
+}
+
+.compras__item__footer__link:hover {
+  text-decoration: none;
+  background: #962b21;
 }
