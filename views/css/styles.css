@@ -1085,6 +1085,34 @@ header .top__carrito {
   }
 }
 
+header .top__carrito .cartMenu {
+  background: rgba(14, 13, 14, 0.5);
+  font-size: 15px;
+  position: absolute;
+  width: 150px;
+  right: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
+  z-index: 99999;
+}
+
+header .top__carrito .cartMenu.showCartNav {
+  display: block;
+}
+
+header .top__carrito .cartMenu li:hover {
+  background: rgba(14, 13, 14, 0.4);
+}
+
+header .top__carrito .cartMenu li a {
+  display: block;
+}
+
 header .top__carrito a {
   color: #fff;
 }
@@ -1211,6 +1239,21 @@ header .top__carrito__badges {
 
 .nav__menu__item:hover {
   background: rgba(14, 13, 14, 0.8);
+}
+
+.nav__menu__item ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+  display: none;
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
+}
+
+.nav__menu__item ul.showSubmenu {
+  display: block;
 }
 
 .nav__menu__link {
