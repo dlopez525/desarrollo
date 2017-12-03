@@ -1,21 +1,20 @@
 <?php
-  $conexion = new Conexion();
   function cat($CAT) {
-    $cat = $CAT;
-    $sql = $conexion->query("SELECT * FROM productos WHERE categoria = '$cat';");
+    $conexion = new Conexion();
+    $sql = $conexion->query("SELECT * FROM productos WHERE categoria = '$CAT';");
     $rows = $conexion->rows($sql);
     $conexion->liberar($sql);
     $conexion->close();
-    return $cat;
+    return $rows;
   }
 
-  // namespace Menu;
-  // // $conexion = new Conexion();
-  // function cat() {
-  //   $sql = $conexion->query("SELECT * FROM menu ;");
-  //   $rows = $conexion->rows($sql);
-  //   $conexion->liberar($sql);
-  //   $conexion->close();
-  //   return $rows;
-  // }
+  function catMenu() {
+    $conexion = new Conexion();
+    $sql = $conexion->query("SELECT * FROM menu;");
+    $rows = $conexion->rows($sql);
+    $conexion->liberar($sql);
+    $conexion->close();
+    return $rows;
+  }
+
  ?>

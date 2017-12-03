@@ -1,5 +1,5 @@
 <?php
-require_once 'uconfig/core.php';
+include 'uconfig/core.php';
 
   if (!isset($_SESSION['app_id'])) {
     $mensaje = "<div class='logMsg-dang'><p>Debes de Iniciar Sesión</p></div>";
