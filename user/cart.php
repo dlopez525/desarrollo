@@ -41,12 +41,20 @@
 			<?php
 				$total=($datos[$i]['Cantidad']*$datos[$i]['Precio'])+$total;
 			}
-
-			}else{
-				echo '<center><h2>No has añadido ningun producto</h2></center>';
-			}
 			echo '<center><h2 id="total">Total: '.$total.'</h2></center>';
+			echo '<a href="models/confCompra.php">Confirmar Compra</a>';
+			}else{
+				if (isset($_GET['cod'])) {
+					$cod = $_GET['cod'];
+					$mensaje = "La compra se realizó correctamente.<br> Tu código de Compra es: {$cod}. <br> Necesitas Presentar este codigo para recoger tu pedido";
+					echo $mensaje;
+				} elseif (isset($_GET['err'])) {
+					echo "Algo salio mal, vuelve a intentarlo";
+				} else {
+					echo '<center><h2>No has añadido ningun producto</h2></center>';
+				}
 
+			}
 ?>
 	</section>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
