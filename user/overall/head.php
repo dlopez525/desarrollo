@@ -17,5 +17,6 @@ include 'uconfig/core.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../views/css/styles.css">
+    <link href="https://file.myfontastic.com/YeUZkiShg37JRT8YsEPXLk/icons.css" rel="stylesheet">
     <title>Home</title>
 </head>
