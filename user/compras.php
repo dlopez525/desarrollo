@@ -3,6 +3,8 @@
      <?php include 'overall/header.php'; ?>
     <?php include 'overall/menu.php'; ?>
 
+    <?php include 'models/compras.php';?>
+
     <div class="compras">
        <div class="compras__item">
             <div class="compras__item__header">
