@@ -21,7 +21,7 @@
   }
 
   $usuario = $_SESSION['app_id'];
-  $fecha = date("d")."-".date("m")."-".date("Y");
+  $fecha = date("d")."-".date("m")."-".date("Y")."-".date("H").":".date("i");
 
   if(isset($_SESSION['carrito'])){
     $datos=$_SESSION['carrito'];
