@@ -2,7 +2,14 @@
 <body class="grayBG">
      <?php include 'overall/header.php'; ?>
     <?php include 'overall/menu.php'; ?>
-
+    <div class="container">
+      <?php
+        if (isset($_GET["err"])) {
+          $mensaje = $_GET["err"];
+          echo $mensaje;
+        }
+       ?>
+    </div>
   <div class="compras">
     <?php include 'models/compras.php';?>
 

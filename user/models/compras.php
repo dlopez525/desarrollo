@@ -17,12 +17,12 @@
                   <p>Fecha de Compra: <span><?php echo $fila['fecha']; ?></span></p>
                   <p>Total: <span>S/.<?php echo $fila['total']; ?></span></p>
                   <div class="compras__item__footer">
-                      <a href="#" class="compras__item__footer__link">Cancelar Compra</a>
+                      <a href="docs/cancelarCompra_exe.php?comp=<?php echo $fila['codigoPedido']; ?>" class="compras__item__footer__link">Cancelar Compra</a>
                   </div>
               </div>
           </div>
 
   	<?php } while ($fila=mysqli_fetch_assoc($resultado)); ?>
   <?php }
-  $conexion->liberar($resultado);  
+  $conexion->liberar($resultado);
  ?>
