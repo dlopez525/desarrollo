@@ -14,7 +14,7 @@
   }
   $newCode = "PED_".generarCodigo(5);
 
-  $sql = $conexion->query("SELECT codigoPedido FROM detalle_pedido WHERE codigoPedido = '$newCode'");
+  $sql = $conexion->query("SELECT codigoPedido FROM pedido WHERE codigoPedido = '$newCode'");
 
   if ($conexion->rows($sql) != 0) {
     $newCode = "PED_".generarCodigo(5);
@@ -25,18 +25,31 @@
 
   if(isset($_SESSION['carrito'])){
     $datos=$_SESSION['carrito'];
+    $total = 0;
+    $sql_3 = $conexion->query("INSERT INTO pedido (id_usuario,codigoPedido,fecha,estado) VALUES ('$usuario','$newCode','$fecha','Pendiente')");
+    if ($sql_3) {
+      for($i=0;$i<count($datos);$i++){
 
-    for($i=0;$i<count($datos);$i++){
-      $idP = $datos[$i]['Id'];
-      $cantidad = $datos[$i]['Cantidad'];
-      $subtotal = $datos[$i]['Cantidad']*$datos[$i]['Precio'];
-      $sql_2 = $conexion->query("INSERT INTO detalle_pedido (codigoPedido,id_producto,id_usuario,cantidad,fecha,subtotal,estado) VALUES('$newCode','$idP','$usuario','$cantidad','$fecha','$subtotal','Pendiente')");
-    }
-    if ($sql_2) {
-      unset($_SESSION['carrito']);
-      header('location: ../cart.php?cod='.$newCode);
+        $idP = $datos[$i]['Id'];
+        $cantidad = $datos[$i]['Cantidad'];
+        $subtotal = $datos[$i]['Cantidad']*$datos[$i]['Precio'];
+        $total = $subtotal + $total;
+        $sql_2 = $conexion->query("INSERT INTO detalle_pedido (codigoPedido,id_producto,cantidad,subTotal) VALUES('$newCode','$idP','$cantidad','$subtotal')");
+      }
+
+      if ($sql_2) {
+        $sql_4 = $conexion->query("UPDATE pedido SET total = '$total' WHERE codigoPedido = '$newCode';");
+        if ($sql_4) {
+          unset($_SESSION['carrito']);
+          header('location: ../cart.php?cod='.$newCode);
+        } else {
+          header('location: ../cart.php?err=1');
+        }
+      } else {
+        header('location: ../cart.php?err=2');
+      }
     } else {
-      header('location: ../cart.php?err=1');
+      header('location: ../cart.php');
     }
   }
 
