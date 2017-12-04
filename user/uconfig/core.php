@@ -1,6 +1,7 @@
 <?php
 #Inicia las sesiones
   session_start();
+  date_default_timezone_set('America/Lima');
 #Constantes de la APP
   define('UTITLE','iFood');
   define('UCOPY','Copyright &copy; ' . date('Y',time()));
