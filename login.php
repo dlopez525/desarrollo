@@ -28,7 +28,7 @@
                   <input type="password" class="boxTextLog__group__input" id="pass" name="pass_txt">
               </div>
               <div class="boxTextLog__group">
-                <a href="forgot.php">¿Olvidaste  tu contraseña?</a>
+                <a href="forgot.php" class="boxTextLog__group__link">¿Olvidaste tu contraseña?</a>
               </div>
 
               <div class="boxTextLog__group">
@@ -42,11 +42,6 @@
           </div>
       </div>
     </form>
-    <div class="container">
-        <div class="buttonLogSocial">
-            <button class="buttomLogSocial__SignUp">Inicia Sesión con Google</button>
-        </div>
-    </div>
     <div class="container fin">
         <div class="linkSingup">
             <p>¿No tienes una cuenta? <a href="singup.php" class="linkSingup__link">Regístrate</a></p>
