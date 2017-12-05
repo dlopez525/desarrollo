@@ -16,7 +16,4 @@
     $conexion->close();
     return $rows;
   }
-
-$conexion->liberar($sql);
-$conexion->close();
  ?>

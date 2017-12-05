@@ -4,6 +4,8 @@
  	$conexion = new AConexion();
 
  	$menu = $_POST['menu_txt'];
+ 	$descripcion=$_POST['descripcion_txt'];
+ 	$fecha=$_POST['fecha_txt'];
  	$precio = $_POST['precio_txt'];
 
 
@@ -17,7 +19,8 @@
 		//Si la foto en el formulario viene vacia, entonces le asigno el valor de la imagen genérica, sino entonces el nombre de la foto que se subio.
 		$imagen = empty($archivo)?$imagen_generica:$se_subio_imagen;
 
- 		$conexion->query("INSERT INTO menu (menu,precio,imagen) VALUES ('$menu','$precio','$imagen');");
+ 		$conexion->query("INSERT INTO menu (menu,descripcion,fecha,precio,imagen) VALUES ('$menu','
+ 			$descripcion','$fecha','$precio','$imagen');");
 
 		$conexion->close();
  		header("location: ../menus.php");

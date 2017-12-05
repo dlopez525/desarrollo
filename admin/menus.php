@@ -38,7 +38,10 @@
                         <tr>
                           <th>#</th>
                           <th>Menu</th>
+                          <th>Descripcion</th>
+                          <th>Fecha</th>
                           <th>Precio</th>
+                          <th>Imagen</th>
                           <th>Acciones</th>
                         </tr>
                       </thead>
