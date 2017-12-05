@@ -36,9 +36,9 @@
                         <div class="col-md-6 col-sm-6 col-xs-12" >
                           <select name="categoria" id="heard" class="form-control" required>
                             <option value="">Selecciona una categoria...</option>
-                            <option value="Bebidas">Bebidas</option>
-                            <option value="Snack">Snack</option>
-                            <option value="mouth">Golosinas</option>
+                            <option value="bebidas">Bebidas</option>
+                            <option value="snack">Snack</option>
+                            <option value="golosinas">Golosinas</option>
                           </select>
                         </div>
                       </div>
@@ -61,7 +61,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Imagen: <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" required="required" type="file" name="imagen_fls">
+                          <input id="birthday" class="date-picker form-control col-md-7 col-xs-12" type="file" name="imagen_fls" value="<?php echo $imagen; ?>">
                         </div>
                       </div>
                       <div class="form-group cont-mostrar-producto">
@@ -70,7 +70,7 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button class="btn btn-primary" type="button">Cancel</button>
+                          <a href="productos.php"class="btn btn-primary" type="button">Cancel</a>
                           <button class="btn btn-primary" type="reset">Reset</button>
                           <button type="submit" class="btn btn-success" name="actualizarProducto_btn">Submit</button>
                         </div>
