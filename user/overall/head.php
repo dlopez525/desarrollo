@@ -7,8 +7,7 @@ include 'uconfig/core.php';
   } elseif ($_SESSION['app_tipoU'] != 2) {
     $mensaje = "<div class='logMsg-dang'><p>No tienes los permisos para entrar a esta sección.</p></div>";
     header('Location: ../login.php?err='.$mensaje);
-  }
-
+  } 
  ?>
 <!DOCTYPE html>
 <html lang="en">

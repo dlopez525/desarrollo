@@ -1,4 +1,9 @@
-<?php include 'overall/head.php';?>
+<?php
+include 'overall/head.php';
+if (isset($_SESSION['passReset'])) {
+  header('Location: changePas.php');
+}
+?>
 <body>
     <?php include 'overall/header.php'; ?>
     <?php include 'overall/menu.php'; ?>

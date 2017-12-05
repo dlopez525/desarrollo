@@ -39,7 +39,6 @@
       header('Location: '.URL.'forgot.php?err='.$mensaje);
     } else {
       $conexion->query("UPDATE usuarios SET keypass='$keypass', newpass='$new_pass' WHERE id_usuario='$id';");
-
       $mensaje = "<div class='logMsg-succ'><p>Te enviamos un correo a: <strong>{$email}</strong>. Con los pasos para reestablecer tu contraseña</p></div>";
       header('Location: '.URL.'forgot.php?err='.$mensaje);
     }
