@@ -12,5 +12,5 @@
 	if (isset($_POST['actualizarTrabajador_btn'])) {
 		$conexion->query("UPDATE usuarios SET nombre='$nombre',apellido='$apellido',password='$password',email='$email' WHERE id_usuario = '$id';");
 		}
-
+$conexion->close();
 header("location: ../trabajadores.php");

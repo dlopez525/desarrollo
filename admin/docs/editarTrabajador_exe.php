@@ -11,4 +11,6 @@
 	$email= $data[1];
 	$nombre = $data[2];
 	$apellido= $data[3];
+	$conexion->liberar($sql);
+	$conexion->close();
 ?>
