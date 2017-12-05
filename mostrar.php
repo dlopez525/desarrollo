@@ -11,4 +11,5 @@ $datos = $conexion->recorrer($sql);
 }
 
 $conexion->liberar($sql);
+$conexion->close();
  ?>

@@ -17,4 +17,7 @@
   } else {
     header('Location: '.URL.'activacion.php?err-act=true');
   }
+
+  $conexion->liberar($sql);
+  $conexion->close();
  ?>

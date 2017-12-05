@@ -46,4 +46,6 @@ if(!empty($_POST['email_txt']) and !empty($_POST['pass_txt'])) {
   $mensaje = "<div class='logMsg-dang'><p>Debe de llenar todos los campos.</p></div>";
   header('Location: '.URL.'login.php?err='.$mensaje);
 }
+$conexion->liberar($sql);
+$conexion->close();
  ?>

@@ -20,10 +20,11 @@ if(!isset($_SESSION['app_id']) and isset($_GET['key'])) {
   } else {
     header('location: login.php');
   }
-  $conexion->liberar($sql);
-  $conexion->close();
 } else {
   header('location: login.php');
 }
+
+$conexion->liberar($sql);
+$conexion->close();
 
  ?>
