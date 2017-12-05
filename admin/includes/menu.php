@@ -46,6 +46,12 @@
                           <li><a href="trabajadores.php">Trabajadores</a></li>
                         </ul>
                       </li>';
+                      echo '<li><a><i class="fa fa-edit"></i>Usuarios <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                          <li><a href="agregarUsuario.php">Agregar Usuario</a></li>
+                          <li><a href="Usuario.php">Usuario</a></li>
+                        </ul>
+                      </li>';
                     }
                    ?>
 
