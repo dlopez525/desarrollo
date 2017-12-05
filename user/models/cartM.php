@@ -57,6 +57,8 @@ if(isset($_SESSION['menu'])){
   }
 }
 
+$conexion->liberar($re);
+$conexion->close();
 header('location: ../menus.php');
 
  ?>

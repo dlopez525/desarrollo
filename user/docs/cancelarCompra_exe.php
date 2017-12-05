@@ -14,4 +14,6 @@
     $mensaje = "<div class='logMsg-war'><p>Algo salio mal.</p></div>";
     header('location: ../compras.php?err='.$mensaje);
   }
+  $conexion->liberar($sql);
+	$conexion->close();
  ?>

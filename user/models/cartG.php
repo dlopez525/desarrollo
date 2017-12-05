@@ -57,6 +57,8 @@ if(isset($_SESSION['carrito'])){
   }
 }
 
+$conexion->liberar($re);
+$conexion->close();
 header('location: ../golosinas.php');
 
  ?>

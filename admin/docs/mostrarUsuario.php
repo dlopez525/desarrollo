@@ -19,6 +19,6 @@ if ($total>0) { ?>
         </tr>
 	<?php } while ($fila=mysqli_fetch_assoc($resultado)); ?>
 <?php }
-$conexion->liberar($sql);
+$conexion->liberar($resultado);
 $conexion->close();
  ?>

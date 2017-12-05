@@ -51,5 +51,6 @@
     }
 
   }
-
+  $conexion->liberar($sql);
+  $conexion->close();
  ?>

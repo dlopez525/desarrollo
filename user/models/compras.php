@@ -25,4 +25,5 @@
   	<?php } while ($fila=mysqli_fetch_assoc($resultado)); ?>
   <?php }
   $conexion->liberar($resultado);
+  $conexion->close();
  ?>

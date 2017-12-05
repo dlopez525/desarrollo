@@ -52,5 +52,6 @@
       header('location: ../cart.php');
     }
   }
-
+$conexion->liberar($sql);
+$conexion->close();
  ?>

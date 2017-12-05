@@ -56,7 +56,8 @@ if(isset($_SESSION['carrito'])){
     $_SESSION['carrito']=$arreglo;
   }
 }
-
+$conexion->liberar($re);
+$conexion->close();
 header('location: ../bebidas.php');
 
  ?>
